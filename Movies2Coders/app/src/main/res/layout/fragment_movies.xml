@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/darkBlue"
+    tools:context=".fragments.movies.MoviesFragment">
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:text="Movies 2 Coders"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="30dp"
+        />
+
+
+    <ProgressBar
+        android:id="@+id/progressDialogMovies"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/teal_200" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:layout_marginTop="70dp"
+        app:spanCount="2"
+        tools:listitem="@layout/item_movies" />
+
+</RelativeLayout>
